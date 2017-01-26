@@ -20,7 +20,7 @@ var year = L.control({position: 'topleft'});
 year.onAdd = function (map) {
 	var yearsel = L.DomUtil.create('div', 'year');
 	yearsel.innerHTML =
-        '<h3>Wählen Sie Jahr und </br>Phänomenbereich</br></h3><select id="disisdrop2" onchange="myFunction();paintitred();"><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option></select>&nbsp;&nbsp;<select id="disisdrop" onchange="myFunction();getthestyle();getlegstr();updateLeg();paintitred();"><option value="rGes">Gesamt</option><option value="rRe">Rechts</option><option value="rLi">Links</option><option value="raAus">Ausländer</option></select>';//<option>Jahr</option>leaveChange();
+        '<h3>Wählen Sie Jahr und </br>Phänomenbereich</br></h3><select id="disisdrop2" onchange="myFunction();paintitred();"><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option></select>&nbsp;&nbsp;<select id="disisdrop" onchange="myFunction();getthestyle();getlegstr();updateLeg();paintitred();"><option value="rGes">Gesamt</option><option value="rRe">Rechts</option><option value="rLi">Links</option><option value="Ausra">Ausländer</option></select>';//<option>Jahr</option>leaveChange();
 	yearsel.firstChild.onmousedown = yearsel.firstChild.ondblclick = L.DomEvent.stopPropagation;
 	return yearsel;
 };
@@ -40,8 +40,8 @@ myFunction();
 currentStyle = rGesStyle;
 
 function getthestyle() {
-	if (document.getElementById("disisdrop").value === "raAus") {
-		currentStyle = raAusStyle;
+	if (document.getElementById("disisdrop").value === "Ausra") {
+		currentStyle = AusraStyle;
 	} else if (document.getElementById("disisdrop").value === "rLi") {
 		currentStyle = rLiStyle;
 	} else if (document.getElementById("disisdrop").value === "rRe") {
@@ -271,10 +271,10 @@ rLiLegend.onAdd = function(map) {
 };
 
 /*=========================================================================
-getraAusColor;raAusStyle;  raAusLegend
+getAusraColor;AusraStyle;  AusraLegend
 ===========================================================================*/
 
-function getraAusColor(c) {
+function getAusraColor(c) {
 	if (c > 100) {
 		return '#324B1C';
 	} else if (c > 50) {
@@ -292,9 +292,9 @@ function getraAusColor(c) {
 	}
 }
 	
-function raAusStyle(feature) {
+function AusraStyle(feature) {
 	return {
-		fillColor: getraAusColor(feature.properties[res]),
+		fillColor: getAusraColor(feature.properties[res]),
 		weight: 1,
 		opacity: 1,
 		color: 'white',
@@ -302,16 +302,16 @@ function raAusStyle(feature) {
 	}
 }
 
-var raAusLegend = L.control({position : 'bottomleft'});
+var AusraLegend = L.control({position : 'bottomleft'});
 
-raAusLegend.onAdd = function(map) {
+AusraLegend.onAdd = function(map) {
 	var div = L.DomUtil.create('div', 'legend');
 	grades = [0,10, 20, 30, 40, 50, 100],
 	labels = [];
 	div.innerHTML = '<h3>Politische motivierte<br>Kriminalität durch Ausländer<h3><p>';
 	for (var i = 0; i < grades.length; i++) {
 		div.innerHTML +=
-			'<i style="background:' + getraAusColor(grades[i] + 1) + '"></i> ' +
+			'<i style="background:' + getAusraColor(grades[i] + 1) + '"></i> ' +
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
 	div.innerHTML += '</p>Fälle pro 100 000 ausl. Einwohner'
@@ -331,7 +331,7 @@ function addlegend() {
 	} else if (currentLegendstr === "rLiLegend") {
 		rLiLegend.addTo(map)
 	} else {
-		raAusLegend.addTo(map)
+		AusraLegend.addTo(map)
 	}
 }
 
