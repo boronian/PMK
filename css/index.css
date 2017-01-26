@@ -1,0 +1,237 @@
+/*globale Einstellung für alle Unterelemente*/
+*{
+    font-family: 'Exo 2';
+    box-sizing: border-box;   
+}
+
+/*Einstellung Textselection*/
+::selection{
+    color: lightsalmon;
+    background-color:#323232;
+}
+
+::-moz-selection{
+    color: lightsalmon;
+    background-color:#323232;
+}
+
+.body{
+    font-size: 100%;
+    background-color: #f2EBE2;
+    margin: 0;
+    width: 100%;
+}
+
+.Karte{
+    margin:0;
+    font-size:100%;
+    background-color:rgb(36, 36, 38);
+    overflow: auto;
+}
+
+.header{
+    background-image: url(../image/berlin.svg);
+    background-position: center ;
+    background-size:contain;
+    background-repeat: repeat;
+    background-origin:border-box;
+    background-break:continuous;
+    background-color:#242426;
+    width: 100%;
+    overflow: hidden;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    position:relative;
+}
+
+/*Für die Karten html -> im header-tag die id="karte" angeben*/
+.header#karte{
+  	background-image: url(../image/berlin3.svg);
+    background-position:center;
+    background-size:contain;
+    background-repeat:repeat;
+    background-origin:border-box;
+    background-break:continuous;
+    background-color:#242426;
+    width: 100%;
+	overflow: hidden;
+    border-color:#363638;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    position:relative;
+}
+
+header h1{
+    font-family:'Cinzel', serif;
+    color:#fff;
+    font-variant:small-caps;
+    font-weight: 500;
+    font-size-adjust: initial;
+    font-size: 2.25rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    vertical-align:center;
+    position:relative;
+}
+
+header h1#Kartentitel{
+    margin-bottom:0;
+    margin-top: 0;
+}
+
+a {
+    text-decoration:none;
+    color:darkslategray;
+}
+a:hover{
+    color: salmon;
+}
+
+/*Einstellung Navigationsmenü*/
+nav {
+    text-align: center;
+    border:none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Exo 2';
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav > ul > li {
+    display: inline-block;
+}
+nav a {
+    display: block; 
+    padding: 5px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+nav li:hover > ul {
+    display: block;
+}
+nav > ul ul {
+    display: none;
+    position: absolute;
+}
+nav > ul ul > li {
+    border-bottom: none;
+    border-top: none;
+}
+nav > ul li a:hover {
+    color: salmon;
+}
+
+.underline{
+    border-bottom: 0.5px solid;
+    padding-bottom: 1px;
+    /*text-decoration: underline;
+    text-decoration-style:dotted;*/
+/*  text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    text-underline-position: below;
+    -webkit-text-underline-position:below;
+    -moz-text-underline-position:below;*/
+}
+
+/*Einstellungen Seiteninhalt*/
+.content{
+    margin-left:25%;
+    margin-right:25%;
+    text-align:center;
+    word-wrap: break-word;
+    line-height: 150%;
+	position:relative;    
+}
+.content ul{
+	list-style: none;
+}
+.Einleitungssatz{
+	line-height: 150%;
+	color:#9F3333;
+}
+
+#Einleitungslink{
+	color: #690e0e;
+}
+#Einleitungslink:hover{
+	color: salmon;
+}
+.links{
+ 	width: 100%;
+	height: 60%;
+    position:absolute;
+	overflow-y: auto;
+}
+
+.linksAbsatz{
+	margin-left:30%;
+    margin-right:25%;
+    word-wrap: break-word;
+    line-height: 150%;
+    position:relative;
+	text-align:left;
+}
+
+.linksAbsatz p {
+	margin-left:2%;	
+}
+.linksAbsatz a {
+	color: #9F3333;	
+}
+.linksAbsatz a:hover {
+	color: salmon;	
+}
+
+.Zitatende{
+    text-align: right;
+}
+
+.info_container li{
+	font-size: 1.2em;
+	text-align: left;
+}
+abbr{
+	cursor: help;
+}
+div p ul{
+    text-align:left;
+    margin-left:33%;
+    margin-right:15%;
+}
+
+/*Einstellung Footer*/
+footer{
+    color:#ffffff;
+    text-align:center;
+    font-variant:small-caps;
+    vertical-align: middle;
+    background-color:#242426;
+    position:fixed;
+    display: inline-block;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding-top:0.8%;
+    font-family: inherit;
+}
+
+footer.footermap{
+    position:relative;
+}
+footer.footerlinks{
+    position:relative;
+}
+
+footer a {
+	color:silver;
+	text-decoration: none;}
+
+footer a:hover{
+	color:salmon;
+}

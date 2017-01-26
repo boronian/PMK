@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PMK Berlin | Karte </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--ICON-->
+	<link rel="shortcut icon" href="image/berlinnobg248.ico"/>
+<!--LEAFLET CSS + JS-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<!--JQUERY-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--STYLESHEET-->
+	<link rel="stylesheet" href="css/karte.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+<!--FONT-FAMILIES-->
+	<link href="http://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet" type="text/css"/>
+	<link href="http://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" type="text/css"/>
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<!--SOCIAL MEDIA-->
+    <link rel="stylesheet" href="css/social-share-kit.css" type="text/css"/>
+    <script src="js/social-share-kit.js"></script>
+<!--SIDEBAR-->
+     <link rel="stylesheet" href="plugins/sidebar-v2-master/css/leaflet-sidebar.css" />
+     <script src="plugins/sidebar-v2-master/js/leaflet-sidebar.js"></script>
+<!--MAGNIFIC-->
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css"/>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.js"></script>
+</head>
+	
+<body class="Karte" >
+	<div>
+		<header class="header" id="karte">
+			<h1 id="Kartentitel">
+				Politisch Motivierte Kriminalit&auml;t Berlin
+			</h1>
+			<nav>
+				<ul>
+					<li title="Startseite" id="Startseite"><a  href="index.html">STARTSEITE</a></li>
+					<li  title="Interaktive Karte" id="Karte" ><a  href="Karte.html" class="underline">INTERAKTIVE KARTE</a></li>
+					<li><a  href="Links.html" title="Weiterführende Links" id="Links">LINKS</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div id="map" class="sidebar-map">
+		<div id="sidebar" class="sidebar collapsed">
+			<!-- Nav tabs -->
+			<div class="sidebar-tabs">
+				<ul role="tablist">
+					<li><a href="#linecharts" role="tab" title="PMK Entwicklung"><i class="fa fa-line-chart"></i></a></li>
+					<li><a href="#stackedcharts" role="tab" title="Politische Lage | Wahldaten"><i class="fa fa-bar-chart"></i></a></li>
+				</ul>
+				<ul role="tablist">
+					<li><a href="#infos" role="tab" title="Anleitung | Hinweis"><i class="fa fa-question"></i></a></li><!--aria-hidden="true"-->
+				</ul>
+			</div>
+			<!-- Tab panes -->
+			<div class="sidebar-content">
+				<div class="sidebar-pane" id="linecharts">
+					<h1 class="sidebar-header">
+						PMK Entwicklung
+						<span class="sidebar-close"><i class="fa fa-caret-right"></i></span>
+					</h1>
+					<div id="chartparent" class="charts">
+						<p id="chart"></p>
+						<p id="bezchart"></p>
+					</div>
+
+					<div class="chartlegend">
+						<p id="legend">
+							<object data="image/LineLegend.svg" width="36%" type="image/svg+xml"></object>                                 
+						</p>
+					</div>    
+				</div>
+
+				<div class="sidebar-pane" id="stackedcharts">
+					<h1 class="sidebar-header">Wahldaten<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
+					<div class="graph_container">
+						<p id="Chart1"></p>
+						<p id="ChartBez"></p>
+					</div>
+					<div class="chartlegend">
+						<div id="legend">
+							<object data="image/parteilegend.svg" width="36%" type="image/svg+xml"></object>                                 
+						</div>
+					</div> 
+				</div>
+				<div class="sidebar-pane" id="infos">
+					<h1 class="sidebar-header">Anleitung<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
+					<div class="info_container">
+						<ol>
+							<li>W&auml;hlen Sie aus den links im Bildschirm angeordneten <b>Dropdown-Men&uuml;s</b> einen Ph&auml;nomenbereich oder die Gesamtzahl der Vorf&auml;lle sowie das Jahr Ihres Interesses aus. </li>
+							<li>Fahren Sie mit der Maus &uuml;ber einen Bezirk und lassen Sie sich den <b>Bezirksnamen</b> anzeigen.</li>
+							<li>Klicken Sie in einen Bezirk Ihrer Wahl und erhalten Sie die <b>absoluten Fallzahlen der Ph&auml;nomenbereiche</b> für das ausgew&auml;hlte Jahr und den Bezirk. <br/>Die <b>Legende</b> zeigt die relativen Zahlen pro 100 000 Einwohner bzw. im Fall der Ausl&auml;nderkriminalit&auml;t pro 100 000 ausl&auml;ndische Einwohner des jeweiligen Bezirks.</li>
+							<li>Die <b>Seitenleiste</b> bietet Ihnen oben rechts zus&auml;tzliche Informationen unter den Rubriken <abbr title="Politisch motiviert Kriminalität">PMK</abbr> und Wahldaten in Form von Graphiken für Berlin oder dem ausgew&auml;hlten Bezirk. Klicken Sie in eine Graphik, um diese zu vergr&ouml;&szlig;ern.</li>
+						</ol><br/>
+						<h3>Hinweis zur Datengrundlage</h3>
+						<p>
+							Daten aus den Jahren 2009 und 2010 wurden auf die Bev&ouml;lkerungsdaten von 2011 normiert, da uns die Bevölkerungsdaten von 2009 und 2010 nicht vorlagen. Die Angabe politische motivierter Kriminalit&auml;t, die keinem Ph&auml;nomenenbereich zugeordnet werden kann, wird per Definition unter der Kategorie &bdquo;Sonstige&ldquo; zusammengefasst. Diese wurden in den uns vorliegenden Datens&auml;tzen nicht gesondert ausgewiesen. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="info"></div> 
+
+	<footer class="footermap">
+		<div class="ssk-group ssk-round" data-url="***ADDURLHERE***" data-text="Interaktive Karte der PMK Berlin" >
+			<a href="https://www.facebook.com/sharer/sharer.php?u=***ADDURLHERE***" class="ssk ssk-facebook" data-ssk-ready="true" target="_blank" title="Teile den Link auf Facebook"></a>
+			<a href="https://twitter.com/home?status=Einzigartige%20Karte%20zur%20PMK%20in%20Berlin%3A%0A***ADDURLHERE***" class="ssk ssk-twitter" target="_blank" title="Teile den Link auf Twitter"></a>
+			<a href="https://plus.google.com/share?url=***ADDURLHERE***" class="ssk ssk-google-plus" target="_blank" title="Teile den Link"></a>
+			<a href="https://www.linkedin.com/shareArticle?mini=true&url=***ADDURLHERE***&title=Politisch%20motivierte%20Kriminalit%C3%A4t%20in%20Berlin&summary=&source=" class="ssk ssk-linkedin" target="_blank" title="Teile den Link"></a>
+		</div>
+		<span>&copy</span> 2017 by <a href="httP://imichalak.carto.com" target="_blank">Ingo Michalak</a> and <a href="httP://chaosfabrik.carto.com" target="_blank">ChaosFabrik</a>.
+	</footer>
+
+	<!--SCRIPTE IMMER AM ENDE vom BODY, damit die Seite schneller lädt-->    
+		<!--INPUT GEOJSON-->
+		<script src="data/Bezirkewithpopdata_rel.geojson"></script>
+		<!--main js file-->
+		<script src="js/core.js"></script>
+</body>
+</html>

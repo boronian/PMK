@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--created by Ingo Michalak for the joint project "Politisch Motivierte Kriminalität in Berlin" with Chaosfabrik-->
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="1100" height="500" 
+	viewBox="0  0   1100  500"><!--style="outline:5px solid #630;"preserveAspectRatio="xMidYMid meet"-->
+	<defs>
+		<style type="text/css">@import url(http://fonts.googleapis.com/css?family=Exo+2);</style>
+	</defs>
+    <g  fill="transparent" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 50 L200 300 450 50" stroke="#754D2C"/><!--"#926037"-->
+        <path d="M50 270 L250 100 450 250" stroke="#752C4D" /><!--"#923760"-->
+        <path d="M50 450 L270 350 450 450" stroke="#4D752C"/><!--"#609237" -->
+    </g>
+    <g style="font-family: 'Exo 2'; font-weight: normal; font-style: normal" font-size="100" fill="#c7c5c5">
+        <text x="500" y="280">Links</text>
+        <text x="500" y="480" fill="#609237">Ausländer</text>
+        <text x="500" y="80">Rechts</text>
+    </g>
+</svg>
