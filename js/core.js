@@ -20,7 +20,7 @@ var year = L.control({position: 'topleft'});
 year.onAdd = function (map) {
 	var yearsel = L.DomUtil.create('div', 'year');
 	yearsel.innerHTML =
-        '<h3>Wählen Sie Jahr und </br>Phänomenbereich</br></h3><select id="disisdrop2" onchange="myFunction();paintitred();"><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option></select>&nbsp;&nbsp;<select id="disisdrop" onchange="myFunction();getthestyle();getlegstr();updateLeg();paintitred();"><option value="rGes">Gesamt</option><option value="rRe">Rechts</option><option value="rLi">Links</option><option value="Ausra">Ausländer</option></select>';//<option>Jahr</option>leaveChange();
+        '<h3>Wählen Sie Jahr und </br>Phänomenbereich</br></h3><select id="disisdrop2" onchange="myFunction();paintitred();"><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option></select>&nbsp;&nbsp;<select id="disisdrop" onchange="myFunction();getthestyle();getlegstr();updateLeg();paintitred();"><option value="rGes">Gesamt</option><option value="rRe">PMK &ndash; rechts</option><option value="rLi">PMK &ndash; links</option><option value="Ausra">PMAK</option></select>';//<option>Jahr</option>leaveChange();
 	yearsel.firstChild.onmousedown = yearsel.firstChild.ondblclick = L.DomEvent.stopPropagation;
 	return yearsel;
 };
@@ -94,9 +94,9 @@ function onEachFeature(feature, layer) {
 	var gewausstr="GewAus"+str2;
 	layer.bindPopup('<b>' + feature.properties.BEZIRK + 
 		'</b> Fälle ' + str2 + '<br> Gesamt: ' + feature.properties[gestr] + 
-		'<br> Rechts: ' + feature.properties[restr] + ' davon ' + feature.properties[gewrestr] + ' gewalttätig' +
-		'<br> Links: ' + feature.properties[listr] + ' davon ' + feature.properties[gewlistr] + ' gewalttätig' +
-		'<br> Ausländer: ' + feature.properties[ausstr] + ' davon ' + feature.properties[gewausstr] + ' gewalttätig'
+		'<br> PMK &ndash; rechts: ' + feature.properties[restr] + ' davon ' + feature.properties[gewrestr] + ' gewalttätig' +
+		'<br> PMK &ndash; links: ' + feature.properties[listr] + ' davon ' + feature.properties[gewlistr] + ' gewalttätig' +
+		'<br> PMAK: ' + feature.properties[ausstr] + ' davon ' + feature.properties[gewausstr] + ' gewalttätig'
 	) ;
 	layer.bindTooltip('<b>' + feature.properties.BEZIRK + '</b>')
 	layer.on({

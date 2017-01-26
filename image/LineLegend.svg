@@ -13,8 +13,8 @@
         <path d="M50 450 L270 350 450 450" stroke="#4D752C"/><!--"#609237" -->
     </g>
     <g style="font-family: 'Exo 2'; font-weight: normal; font-style: normal" font-size="100" fill="#c7c5c5">
-        <text x="500" y="280">Links</text>
-        <text x="500" y="480" fill="#609237">Ausländer</text>
-        <text x="500" y="80">Rechts</text>
+        <text x="500" y="280">PMK &ndash; links</text>
+        <text x="500" y="480" fill="#609237">PMAK</text>
+        <text x="500" y="80">PMK &ndash; rechts</text>
     </g>
 </svg>
