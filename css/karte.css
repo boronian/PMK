@@ -73,6 +73,11 @@ div#map{
 	color:#c7c5c5;
 }
 
+.charts {
+    width:100%;
+}
+
+
 .chartlegend {
 	float:right;
 	text-align:right;
@@ -91,10 +96,9 @@ object{
 	display: inline-block;
 }
 .graph_container{
-	display: block;
-	width: 600;
-	height: 600;
-}
+	width: 100%;
+    display: block;
+}/*height: 600;*/
 
 .leaflet-control-attribution a:hover {
 	text-decoration: underline;

@@ -102,11 +102,11 @@ function onEachFeature(feature, layer) {
 	layer.on({
 		click: function () {
 			document.getElementById('bezchart').innerHTML = '<a href="image/' + 
-				feature.properties.BEZIRK + '.svg"><object data="image/' + 
-				feature.properties.BEZIRK + '.svg" width="100%" type="image/svg+xml"></object></a>';
+				feature.properties.BEZIRK + '.svg"><img src="image/' + 
+				feature.properties.BEZIRK + '.svg" width="100%" type="image/svg+xml"></img></a>';
 			document.getElementById('ChartBez').innerHTML = '<a href="image/wahl_' + 
-				feature.properties.BEZIRK + '.svg"><object data="image/wahl_' + 
-				feature.properties.BEZIRK + '.svg" width="100%" type="image/svg+xml"></object></a>';
+				feature.properties.BEZIRK + '.svg"><img src="image/wahl_' + 
+				feature.properties.BEZIRK + '.svg" width="100%" type="image/svg+xml"></img></a>';
 		}
 	});
 }
@@ -166,8 +166,8 @@ rGesLegend.onAdd = function (map) {
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
 	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
-	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><object data="image/Ges.svg" width="100%" type="image/svg+xml"></object></a>'
-	document.getElementById('Chart1').innerHTML = '<a href="image/wahlges.svg"><object data="image/wahlges.svg" width="100%" type="image/svg+xml"></object></a>';
+	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
+	document.getElementById('Chart1').innerHTML = '<a href="image/wahlges.svg"><img src="image/wahlges.svg" width="100%" type="image/svg+xml"></img></a>';
 	return div;
 };
 
@@ -216,7 +216,7 @@ rReLegend.onAdd = function(map) {
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
 	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
-	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><object data="image/Ges.svg" width="100%" type="image/svg+xml"></object></a>'
+	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
 
@@ -266,7 +266,7 @@ rLiLegend.onAdd = function(map) {
 		div.innerHTML += listring
 	}
 	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
-	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><object data="image/Ges.svg" width="100%" type="image/svg+xml"></object></a>'
+	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
 
@@ -315,7 +315,7 @@ AusraLegend.onAdd = function(map) {
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
 	div.innerHTML += '</p>Fälle pro 100 000 ausl. Einwohner'
-	document.getElementById('chart').innerHTML = '<a href="image/Ges.svg"><object data="image/Ges.svg" width="100%" type="image/svg+xml"></object></a>'
+	document.getElementById('chart').innerHTML = '<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
 
