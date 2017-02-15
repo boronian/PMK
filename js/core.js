@@ -1,13 +1,118 @@
+function setInitialMapZoom() {
+
+   var intviewportWidth = window.innerWidth;
+   var mapZoom;
+   
+
+   if (intviewportWidth < 400) {
+      mapZoom = 9;
+}else if (intviewportWidth >= 400 && intviewportWidth < 481){
+      mapZoom = 9;
+} else if (intviewportWidth >= 481 && intviewportWidth < 641){
+      mapZoom = 9;
+} else if (intviewportWidth >= 641 && intviewportWidth < 1281){
+      mapZoom = 10;
+}  else {
+      mapZoom = 11;
+}
+
+return mapZoom;
+}
+function setInitialMapMinZoom() {
+
+   var intviewportWidth = window.innerWidth;
+   var mapMinZoom;
+   
+
+   if (intviewportWidth < 400) {
+      mapMinZoom = 9;
+}else if (intviewportWidth >= 400 && intviewportWidth < 481){
+      mapMinZoom = 9;
+}else if (intviewportWidth >= 481 && intviewportWidth < 641){
+      mapMinZoom = 9;
+}else if (intviewportWidth >= 641 && intviewportWidth < 1281){
+      mapMinZoom = 10;
+}    else {
+      mapMinZoom = 10
+      ;
+}
+
+return mapMinZoom;
+}
+function setInitialMapMaxZoom() {
+
+   var intviewportWidth = window.innerWidth;
+   var mapMaxZoom;
+   
+
+   if (intviewportWidth < 400) {
+      mapMaxZoom = 9;
+}else if (intviewportWidth >= 400 && intviewportWidth < 481){
+      mapMaxZoom = 9;
+}else if (intviewportWidth >= 481 && intviewportWidth < 641){
+      mapMaxZoom = 10;
+}else if (intviewportWidth >= 641 && intviewportWidth < 1281){
+      mapMaxZoom = 10;
+}    else {
+      mapMaxZoom = 12
+      ;
+}
+
+return mapMaxZoom;
+}
+
+function setInitialMapMaxBounds() {
+
+   var intviewportWidth = window.innerWidth;
+   var mapMaxBounds;
+   
+
+   if (intviewportWidth < 400) {
+      mapMaxBounds = ([[51.9,12.803],[52.914,14.053]]);
+}else if (intviewportWidth >= 400 && intviewportWidth < 481){
+      mapMaxBounds = ([[52.2,11.9],[52.814,14.9]]);
+}else if (intviewportWidth >= 481 && intviewportWidth < 641){
+      mapMaxBounds = ([[52.2,11.9],[52.814,14.9]]);
+}else if (intviewportWidth >= 641 && intviewportWidth < 1281){
+      mapMaxBounds = ([[52.2,11.9],[52.814,14.9]]);
+}    else {
+      mapMaxBounds = ([[52.2,11.9],[52.814,14.9]])
+      ;
+}
+
+return mapMaxBounds;
+}
+function setInitialMapCenter() {
+
+   var intviewportWidth = window.innerWidth;
+   var mapCenter;
+   
+
+   if (intviewportWidth < 400) {
+      mapCenter = [52.407, 13.403];
+}else if (intviewportWidth >= 400 && intviewportWidth < 481){
+      mapCenter = [52.507, 13.403];
+} else if (intviewportWidth >= 481 && intviewportWidth < 641){
+      mapCenter = [52.507, 13.403];
+} else if (intviewportWidth >= 641 && intviewportWidth < 1281){
+      mapCenter = [52.507, 13.403];
+}   else {
+      mapCenter = [52.507, 13.403]
+      ;
+}
+
+return mapCenter;
+}
 var map = L.map('map', {
 	fullscreenControl: false,
-	center: [52.507, 13.403],
-	zoom: 11,
-	minZoom: 10,
-	maxZoom: 12,
+	center: setInitialMapCenter()/*[52.507, 13.403]*/,
+	zoom: setInitialMapZoom(),
+	minZoom: setInitialMapMinZoom(),
+	maxZoom: setInitialMapMaxZoom(),
 	fullscreenControlOptions: {
 		position: 'topleft'
 	},
-	maxBounds: ([[52.2,11.9],[52.814,14.9]])
+	maxBounds: setInitialMapMaxBounds()/*([[52.2,11.9],[52.814,14.9]])*/
 });
 
 mapLink = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
