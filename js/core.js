@@ -1,3 +1,14 @@
+//reload window when adjusting size
+$(window).bind('resize', function(e)
+{
+  if (window.RT) clearTimeout(window.RT);
+  window.RT = setTimeout(function()
+  {
+    this.location.reload(false); /* false to get page from cache */
+  }, 100);
+});
+
+//set zoom, center, maxBounds for different window sizes
 function setInitialMapZoom() {
 
    var intviewportWidth = window.innerWidth;
@@ -39,6 +50,7 @@ function setInitialMapMinZoom() {
 
 return mapMinZoom;
 }
+
 function setInitialMapMaxZoom() {
 
    var intviewportWidth = window.innerWidth;
@@ -82,6 +94,7 @@ function setInitialMapMaxBounds() {
 
 return mapMaxBounds;
 }
+
 function setInitialMapCenter() {
 
    var intviewportWidth = window.innerWidth;
@@ -103,6 +116,7 @@ function setInitialMapCenter() {
 
 return mapCenter;
 }
+
 var map = L.map('map', {
 	fullscreenControl: false,
 	center: setInitialMapCenter()/*[52.507, 13.403]*/,
