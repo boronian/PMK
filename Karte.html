@@ -30,22 +30,26 @@
 </head>
 	
 <body class="Karte" >
-	<div>
+	<!-- div für die Anzeige der Fensterbreite -->
+	<!-- <div id="topline"></div> -->
+	<!-- <div> -->
 		<header class="header" id="karte">
 			<h1 id="Kartentitel">
 				Politisch Motivierte Kriminalit&auml;t Berlin
 			</h1>
 			<nav>
-				<ul>
+				<ul class="navbar" id="myNavbar">
+					<li class="icon"><a href="javascript:void(0);" onclick="myNavResponsive()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+  </li>
 					<li title="Startseite" id="Startseite"><a  href="index.html">STARTSEITE</a></li>
 					<li  title="Interaktive Karte" id="Karte" ><a  href="Karte.html" class="underline">INTERAKTIVE KARTE</a></li>
 					<li><a  href="Links.html" title="Weiterführende Links" id="Links">LINKS</a></li>
 				</ul>
 			</nav>
 		</header>
-	</div>
+	<!-- </div> -->
 
-	<div id="map" class="sidebar-map">
+	<div id="map" class="sidebar-map" onload="mapHeightFunction();" onresize="mapHeightFunction();">
 		<div id="sidebar" class="sidebar collapsed">
 			<!-- Nav tabs -->
 			<div class="sidebar-tabs">
@@ -109,7 +113,7 @@
 
 	<div id="info"></div> 
 
-	<footer class="footermap">
+	<footer class="footermap" id="map-footer">
 		<div class="ssk-group ssk-round" data-url="http://grafgeo.de/" data-text="Interaktive Karte der PMK Berlin" >
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http://grafgeo.de/" class="ssk ssk-facebook" data-ssk-ready="true" target="_blank" title="Teile den Link auf Facebook"></a>
 			<a href="https://twitter.com/home?status=Einzigartige%20Karte%20zur%20PMK%20in%20Berlin%3A%0Ahttp://grafgeo.de/" class="ssk ssk-twitter" target="_blank" title="Teile den Link auf Twitter"></a>
@@ -119,10 +123,31 @@
 		<span>&copy;</span> 2017 by <a href="http://imichalak.carto.com" target="_blank">Ingo Michalak</a> and <a href="http://chaosfabrik.carto.com" target="_blank">Nadja Rothbarth</a>.
 	</footer>
 
-	<!--SCRIPTE IMMER AM ENDE vom BODY, damit die Seite schneller lädt-->    
+	<!--SCRIPTE IMMER AM ENDE vom BODY, damit die Seite schneller lädt-->
+	<script src="js/mapHeight.js"></script>    
 		<!--INPUT GEOJSON-->
 		<script src="data/Bezirkewithpopdata_rel.geojson"></script>
 		<!--main js file-->
+		
 		<script src="js/core.js"></script>
+		<script src="js/navResponsive.js"></script>
+		
+		
+<!-- Script für die Anzeige der Fensterbreite	 -->
+		<!-- <script>
+if (document.getElementById('topline')) {
+	window.onload = window.onresize = function (evt) {
+		var width = window.innerWidth ||  (window.document.documentElement.clientWidth || window.document.body.clientWidth);
+		var height = window.innerHeight || (window.document.documentElement.clientHeight || window.document.body.clientHeight);
+		document.getElementById('topline').innerHTML = '<p>' + width + '</p>'
+	}
+}
+
+$('#home').click(function() {
+	$('html, body').animate({
+    	scrollTop: $("#topline").offset().top
+	}, 2000);
+});
+</script> -->
 </body>
 </html>

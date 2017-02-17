@@ -11,25 +11,29 @@
 		<!--FONT-FAMILIES-->
 		<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+		<link href="plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
 		<!--SOCIAL MEDIA-->
 		<link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
 		<script src="js/social-share-kit.js"></script>
 	</head>
-	<body class="body" id="body" onload= fixedFunction() onresize= fixedFunction()>
+	<body class="body" id="body" onload= "fixedFunction()" onresize= "fixedFunction()">
 		<!-- <div class="body"> -->
 			<header class="header" id="fixed-header">
 				<h1>
 					<!--<a href="index.html">
 						<img src="image/Logo_Kreis.png" id="headerLogo" width=7% height=7%>
 					</a>
-					<br/>--><br/>Politisch Motivierte Kriminalität <br/> Berlin<br/><br/>
+					<br/>--><br class="responsive"/>Politisch Motivierte Kriminalität <br class="responsive"/> Berlin<br class="responsive"/><br class="responsive"/>
 				</h1>
 				<nav>
-					<ul>
+					<ul class="navbar" id="myNavbar">
+						<li class="icon"><a href="javascript:void(0);" onclick="myNavResponsive()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+  </li>
 						<li title='Startseite' id="Startseite"><a  class="underline" href="index.html" >STARTSEITE</a></li>
 						<li  title="Interaktive Karte" id="Karte" ><a  href="Karte.html">INTERAKTIVE KARTE</a></li>
 					   <!-- <li><a  href="Hintergrundinformationen.html" title="Hintergrundinformationen" id="Hintergrundinfo">HINTERGRUND</a></li>-->
 						<li><a  href="Links.html" title="Weiterführende Links" id="Links">LINKS</a></li>
+						
 					</ul>
 				</nav>
 			</header>
@@ -76,5 +80,6 @@
 			<span>&copy;</span> 2017 by <a href="http://imichalak.carto.com" target="_blank">Ingo Michalak</a> and <a href="http://chaosfabrik.carto.com" target="_blank">Nadja Rothbarth</a>.
 		</footer>
 		<script src="js/height.js"></script>
+		<script src="js/navResponsive.js"></script>
 	</body>
 </html>
