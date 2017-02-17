@@ -572,4 +572,7 @@ object{
        display: none;
        transition: width 2s;
    }
+   .sidebar{
+       height:93% !important;
+   }
  }
