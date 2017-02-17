@@ -14,7 +14,10 @@
     color: lightsalmon;
     background-color:#323232;
 }
-
+/*#body {
+    padding-top:285px;
+    padding-bottom:80px;
+}*/
 .body{
     font-size: 100%;
     background-color: #f2EBE2;
@@ -24,6 +27,7 @@
 
 .Karte{
     margin:0;
+    /*padding:0;*/
     font-size:100%;
     background-color:rgb(36, 36, 38);
     overflow: auto;
@@ -40,9 +44,11 @@
     width: 100%;
     overflow: hidden;
     border:0px;
-    margin:0px;
+    margin:0 auto;
     padding:0px;
-    position:relative;
+    position:fixed;
+    top:0;
+    z-index: 800;
 }
 
 /*Für die Karten html -> im header-tag die id="karte" angeben*/
@@ -69,8 +75,8 @@ header h1{
     font-variant:small-caps;
     font-weight: 500;
     font-size-adjust: initial;
-    font-size: 2.25rem;
-    letter-spacing: 0.2rem;
+    font-size: 2.25em;
+    letter-spacing: 0.1em;
     text-align: center;
     vertical-align:center;
     position:relative;
@@ -93,39 +99,42 @@ a:hover{
 nav {
     text-align: center;
     border:none;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: 500;
     font-family: 'Exo 2';
 }
-nav ul {
+nav ul.navbar {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-nav > ul > li {
+nav > ul.navbar > li {
     display: inline-block;
 }
 nav a {
     display: block; 
-    padding: 5px 15px;
+    /*padding: 5px 15px;*/
+    margin: 5px 15px;
     color: #fff;
     text-decoration: none;
 }
 nav li:hover > ul {
     display: block;
 }
-nav > ul ul {
+nav > ul.navbar ul {
     display: none;
     position: absolute;
 }
-nav > ul ul > li {
+nav > ul.navbar ul.navbar > li {
     border-bottom: none;
     border-top: none;
 }
-nav > ul li a:hover {
+nav > ul.navbar li a:hover {
     color: salmon;
 }
-
+ul.navbar li.icon{
+     display:none;
+ }
 .underline{
     border-bottom: 0.5px solid;
     padding-bottom: 1px;
@@ -141,8 +150,10 @@ nav > ul li a:hover {
 
 /*Einstellungen Seiteninhalt*/
 .content{
-    margin-left:25%;
-    margin-right:25%;
+    /*margin-left:25%;
+    margin-right:25%;*/
+    width: 100%;
+    margin:0 auto;
     text-align:center;
     word-wrap: break-word;
     line-height: 150%;
@@ -163,15 +174,19 @@ nav > ul li a:hover {
 	color: salmon;
 }
 .links{
- 	width: 100%;
-	height: 60%;
+ 	width: 50%;
+	/*height: 60%;*/
+	margin:0 auto;
+	/*padding-bottom:-3%;
     position:absolute;
-	overflow-y: auto;
+	overflow-y: auto;*/
 }
 
 .linksAbsatz{
-	margin-left:30%;
-    margin-right:25%;
+	/*margin-left:30%;
+    margin-right:25%;*/
+    width: 100%;
+    margin: 0 auto;
     word-wrap: break-word;
     line-height: 150%;
     position:relative;
@@ -192,10 +207,6 @@ nav > ul li a:hover {
     text-align: right;
 }
 
-.info_container li{
-	font-size: 1.2em;
-	text-align: left;
-}
 abbr{
 	cursor: help;
 }
@@ -230,8 +241,262 @@ footer.footerlinks{
 
 footer a {
 	color:silver;
-	text-decoration: none;}
+	text-decoration: none;
+}
 
 footer a:hover{
 	color:salmon;
+}
+
+@media screen and (max-width:387px){
+   a{
+       text-decoration:underline;
+   } 
+   footer{
+       font-size:0.8em;
+   }
+   footer a,.leaflet-control-attribution a{
+       text-decoration:underline;
+   }
+   
+   abbr{
+       text-decoration:none;
+   }
+   .links{
+       width:100%;
+       padding-right:10px;
+       padding-left:10px;
+   }
+   .header, .header#karte{
+       background-repeat:no-repeat;
+       background-image: url(../image/berlin.svg);
+   }
+   .responsive{
+       display: none;
+   }
+   header h1{
+     font-size:0.8em;
+     letter-spacing:normal; 
+   }
+   .Einleitungssatz{
+     font-size: 1.2em;
+   }
+   /*nav{
+       font-size:1em;
+   } */
+   nav > ul.navbar > li{
+       display:none;
+   }
+   ul.navbar li.icon{
+       display:inline-block;
+   }
+   nav > ul.navbar.navResponsive{
+       position:relative;
+   }
+   nav > ul.navbar.navResponsive li.icon{
+       position:relative;
+       right:0;
+       top:0;
+   }
+   nav > ul.navbar.navResponsive li{
+       float:none;
+       display:inline;
+   }
+   nav > ul.navbar.navResponsive li a{
+       display:block;
+       text-align:center;
+       
+   }
+   .underline{
+       border-bottom: 0px;
+       padding-bottom: 0px;
+       text-decoration: underline;
+       text-decoration-style: dotted;
+   }
+}
+
+@media screen and (min-width:388px) and (max-width:480px ){
+   a{
+       text-decoration:underline;
+   } 
+   footer{
+       font-size:0.8em;
+   }
+   footer a,.leaflet-control-attribution a{
+       text-decoration:underline;
+   }
+   
+   abbr{
+       text-decoration:none;
+   }
+   .links{
+       width:100%;
+       padding-right:10px;
+       padding-left:10px;
+   }
+   .header, .header#karte{
+       background-repeat:no-repeat;
+       background-image: url(../image/berlin.svg);
+   }
+   .responsive{
+       display: none;
+   }
+   header h1{
+     font-size:1.0em;  
+   }
+   .Einleitungssatz{
+     font-size: 1.2em;
+   }
+   /*nav{
+       font-size:1em;
+   } */
+   nav > ul.navbar > li{
+       display:none;
+   }
+   ul.navbar li.icon{
+       display:inline-block;
+   }
+   nav > ul.navbar.navResponsive{
+       position:relative;
+   }
+   nav > ul.navbar.navResponsive li.icon{
+       position:relative;
+       right:0;
+       top:0;
+   }
+   nav > ul.navbar.navResponsive li{
+       float:none;
+       display:inline;
+   }
+   nav > ul.navbar.navResponsive li a{
+       display:block;
+       text-align:center;
+       
+   }
+   .underline{
+       border-bottom: 0px;
+       padding-bottom: 0px;
+       text-decoration: underline;
+       text-decoration-style: dotted;
+   }   
+}
+@media screen and (min-width:481px) and (max-width:767px ){
+   a{
+       text-decoration:underline;
+   } 
+   footer{
+       font-size:0.8em;
+   }
+   footer a,.leaflet-control-attribution a{
+       text-decoration:underline;
+   }
+   
+   abbr{
+       text-decoration:none;
+   }
+   .links{
+       width:100%;
+       padding-right:25px;
+       padding-left:25px;
+   }
+   .header, .header#karte{
+       background-repeat:no-repeat;
+       background-image: url(../image/berlin.svg);
+   }
+   .responsive{
+       display: none;
+   }
+   header h1{
+     font-size:1.2em;  
+   }
+   .Einleitungssatz{
+     font-size: 1.2em;
+   }
+   /*nav{
+       font-size:1em;
+   } */
+   nav > ul.navbar > li{
+       display:none;
+   }
+   ul.navbar li.icon{
+       display:inline-block;
+   }
+   nav > ul.navbar.navResponsive{
+       position:relative;
+   }
+   nav > ul.navbar.navResponsive li.icon{
+       position:relative;
+       right:0;
+       top:0;
+   }
+   nav > ul.navbar.navResponsive li{
+       float:none;
+       display:inline;
+   }
+   nav > ul.navbar.navResponsive li a{
+       display:block;
+       text-align:center;
+       
+   }
+   .underline{
+       border-bottom: 0px;
+       padding-bottom: 0px;
+       text-decoration: underline;
+       text-decoration-style: dotted;
+   }
+}
+@media screen and (min-width:768px) and (max-width:1024px ){
+   a{
+       text-decoration:underline;
+   } 
+   footer{
+       font-size:0.8em;
+   }
+   footer a,.leaflet-control-attribution a{
+       text-decoration:underline;
+   }
+   
+   abbr{
+       text-decoration:none;
+   }
+   .links{
+       width:100%;
+       padding-right:25px;
+       padding-left:25px;
+   }
+   .header, .header#karte{
+       background-repeat:no-repeat;
+       background-image: url(../image/berlin.svg);
+   }
+   .responsive{
+       display: none;
+   } 
+   header h1{
+     font-size:1.8em;  
+   }
+   
+}
+@media screen and (min-width:1025px) and (max-width:1280px ){
+   a{
+       text-decoration:underline;
+   } 
+   footer{
+       font-size:0.8em;
+   }
+   footer a,.leaflet-control-attribution a{
+       text-decoration:underline;
+   }
+   
+   abbr{
+       text-decoration:none;
+   }
+   .links{
+       width:80%;
+       padding-right:25px;
+       padding-left:25px;
+   } 
+   .header{
+       background-repeat:no-repeat;
+       background-image: url(../image/berlin.svg);
+   } 
 }

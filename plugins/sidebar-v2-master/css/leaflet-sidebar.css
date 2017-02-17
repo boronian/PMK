@@ -1,21 +1,25 @@
 .sidebar {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  /*top: 0;
+  bottom: 0;*/
   width: 100%;
+  /*height: 100%;*/
   height: 95.5%; /*selbst angepasst*/
   overflow: hidden;
-  z-index: 800; }
+  z-index: 800;
+  margin-top:10px;
+}
   .sidebar.collapsed {
     width: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar {
-      top: 10px;
-      bottom: 10px;
+      /*top: 10px;
+      bottom: 10px;*/
       transition: width 500ms; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 430px) and (max-width: 991px) {
     .sidebar {
-      width: 305px; } }
+      /*width: 305px; */
+        width: 288px;} }
   @media (min-width: 992px) and (max-width: 1199px) {
     .sidebar {
       width: 390px; } }
@@ -25,13 +29,13 @@
 
 .sidebar-left {
   left: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar-left {
       left: 10px; } }
 
 .sidebar-right {
   right: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar-right {
       right: 10px; } }
 
@@ -53,7 +57,8 @@
       width: 100%;
       height: 40px;
       color: #333;
-      font-size: 12pt;
+      /*font-size: 12pt;*/
+       font-size: 1.4em;
       overflow: hidden;
       transition: all 80ms; }
       .sidebar-tabs > li:hover, .sidebar-tabs > ul > li:hover {
@@ -107,7 +112,7 @@
   padding: 10px 20px; }
   .sidebar-pane.active {
     display: block; }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 430px) and (max-width: 991px) {
     .sidebar-pane {
       min-width: 265px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -122,7 +127,8 @@
   height: 40px;
   padding: 0 20px;
   line-height: 40px;
-  font-size: 14.4pt;
+  /*font-size: 14.4pt;*/
+  font-size: 1.6em;
   /*color: #fff;
   background-color: #0074d9; */
   color: #c7c5c5;
@@ -144,13 +150,13 @@
 
 .sidebar-left ~ .sidebar-map {
   margin-left: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar-left ~ .sidebar-map {
       margin-left: 0; } }
 
 .sidebar-right ~ .sidebar-map {
   margin-right: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar-right ~ .sidebar-map {
       margin-right: 0; } }
 
@@ -159,17 +165,17 @@
   .sidebar.leaflet-touch {
     box-shadow: none;
     border-right: 2px solid rgba(0, 0, 0, 0.2); }
-  @media (min-width: 768px) {
+  @media (min-width: 430px) {
     .sidebar {
       border-radius: 4px; }
       .sidebar.leaflet-touch {
         border: 2px solid rgba(0, 0, 0, 0.2); } }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .sidebar-left ~ .sidebar-map .leaflet-left {
     transition: left 500ms; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 430px) and (max-width: 991px) {
   .sidebar-left ~ .sidebar-map .leaflet-left {
     left: 315px; } }
 
@@ -181,15 +187,15 @@
   .sidebar-left ~ .sidebar-map .leaflet-left {
     left: 470px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .sidebar-left.collapsed ~ .sidebar-map .leaflet-left {
     left: 50px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
     transition: right 500ms; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 430px) and (max-width: 991px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
     right: 315px; } }
 
@@ -201,6 +207,79 @@
   .sidebar-right ~ .sidebar-map .leaflet-right {
     right: 470px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
+    
+/*@media screen and (min-width:430px) and (max-width:640px ){
+    
+    
+    .sidebar{
+        margin-right:2px;
+        margin-top:2px !important;
+        width:288px !important;
+    }
+    /*.sidebar-left {
+      left: 10px !important; 
+    }
+    .sidebar-right {
+      right: 10px !important; 
+    }
+    .sidebar.collapsed {
+        width: 30px;
+    }
+    .sidebar-tabs, .sidebar-tabs > ul{
+        width:30px !important;
+    }
+    .sidebar-tabs > li, .sidebar-tabs > ul > li {
+        height:30px !important;
+    }
+    .sidebar-tabs > li > a, .sidebar-tabs > ul > li > a {
+        line-height: 30px !important;
+    }
+    .sidebar-left .sidebar-content {
+        left: 30px !important;
+    }
+    .sidebar-right .sidebar-content {
+        right: 30px !important;  
+    }
+    .sidebar-pane{
+        min-width:258px !important;
+    }
+    .sidebar-header{
+        height: 30px !important;
+        line-height: 30px !important;
+        font-size:1.2em !important;
+    }
+    .sidebar-right .sidebar-header {
+        padding-left: 30px !important; 
+    }
+    .sidebar-close{
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .sidebar-left ~ .sidebar-map {
+        margin-left: 0 !important;
+    }
+    .sidebar-right ~ .sidebar-map{
+        margin-right:0 !important;
+    }
+    .sidebar.leaflet-touch {
+        border: 2px solid rgba(0, 0, 0, 0.2) !important;
+    }
+    .sidebar-left ~ .sidebar-map .leaflet-left {
+        transition: left 500ms;
+        left: 315px !important;
+    }
+    
+    .sidebar-right ~ .sidebar-right .leaflet-right {
+        transition: right 500ms !important;
+        right: 315px !important;
+    }
+    .sidebar-left.collapsed ~ .sidebar-map .leaflet-left{
+        right:50px !important;
+    }
+    .sidebar-right.collapsed ~ .sidebar-map .leaflet-right{
+        right:50px !important;
+    }
+ } */  

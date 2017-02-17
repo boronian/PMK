@@ -11,31 +11,36 @@
 		<!--FONT-FAMILIES-->
 		<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+		<link href="plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
 		<!--SOCIAL MEDIA-->
 		<link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
 		<script src="js/social-share-kit.js"></script>
 	</head>
-	<body class="body" id="body">
-		<div class="body">
-			<header class="header">
+	<body class="body" id="body" onload= "fixedFunction()" onresize= "fixedFunction()">
+		<!-- <div class="body"> -->
+			<header class="header" id="fixed-header">
 				<h1>
 					<!--<a href="index.html">
 						<img src="image/Logo_Kreis.png" id="headerLogo" width=7% height=7%>
 					</a>
-					<br/>--><br/>Politisch Motivierte Kriminalität <br/> Berlin<br/><br/>
+					<br/>--><br class="responsive"/>Politisch Motivierte Kriminalität <br class="responsive"/> Berlin<br class="responsive"/><br class="responsive"/>
 				</h1>
 				<nav>
-					<ul>
+					<ul class="navbar" id="myNavbar">
+						<li class="icon"><a href="javascript:void(0);" onclick="myNavResponsive()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+  </li>
 						<li title='Startseite' id="Startseite"><a  class="underline" href="index.html" >STARTSEITE</a></li>
 						<li  title="Interaktive Karte" id="Karte" ><a  href="Karte.html">INTERAKTIVE KARTE</a></li>
 					   <!-- <li><a  href="Hintergrundinformationen.html" title="Hintergrundinformationen" id="Hintergrundinfo">HINTERGRUND</a></li>-->
+
 						<li><a  href="Links.html" title="Weiterf&uuml;hrende Links" id="Links">LINKS</a></li>
 						<li title="Hintergrund" id="Hintergrund"><a href="Hintergrund.html">HINTERGRUND</a></li>
 						<li title='Impressum' id="Impressum"><a href="impressum.html">IMPRESSUM</a></li>
+
 					</ul>
 				</nav>
 			</header>
-		</div>
+		<!-- </div> -->
 		<div class="links">
 			<div class="content">
 				<h2 class="Einleitungssatz">Entdecken Sie <a id="Einleitungslink" href="Karte.html" target="_blank" title="Interaktive Karte">interaktiv</a> die Entwicklung der politisch motivierten Kriminalit&auml;t in Berlin im Zeitraum von 2009 bis 2015.</h2><br/>
@@ -68,14 +73,18 @@
 				</p>
 			</div>
 		</div>
-		<footer >
+
+		<footer id="fixed-footer">
 			<div class="ssk-group ssk-round" data-url="http://www.gisistheway.de" data-text="Interaktive Karte der PMK Berlin" >
 				<a href="https://www.facebook.com/sharer/sharer.php?u=http://www.gisistheway.de" class="ssk ssk-facebook" data-ssk-ready="true" target="_blank" title="Teile den Link auf Facebook"></a>
 				<a href="https://twitter.com/home?status=Einzigartige%20Karte%20zur%20PMK%20in%20Berlin%3A%0Ahttp://www.gisistheway.de" class="ssk ssk-twitter" target="_blank" title="Teile den Link auf Twitter"></a>
 				<a href="https://plus.google.com/share?url=http://www.gisistheway.de" class="ssk ssk-google-plus" target="_blank" title="Teile den Link"></a>
 				<a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.gisistheway.de&title=Politisch%20motivierte%20Kriminalit%C3%A4t%20in%20Berlin&summary=&source=" class="ssk ssk-linkedin" target="_blank" title="Teile den Link"></a>
+
 			</div>
-			<span>&copy</span> 2017 by <a href="http://imichalak.carto.com" target="_blank">Ingo Michalak</a> and <a href="http://chaosfabrik.carto.com" target="_blank">Nadja Rothbarth</a>.
+			<span>&copy;</span> 2017 by <a href="http://imichalak.carto.com" target="_blank">Ingo Michalak</a> and <a href="http://chaosfabrik.carto.com" target="_blank">Nadja Rothbarth</a>.
 		</footer>
+		<script src="js/height.js"></script>
+		<script src="js/navResponsive.js"></script>
 	</body>
 </html>
