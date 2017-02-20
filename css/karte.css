@@ -85,6 +85,7 @@ div#map{
 	width:100%;
 }
 
+
 object{
 	pointer-events: none;
 }
@@ -123,7 +124,7 @@ object{
     
     div#map{
         width:100%;
-        height: 83vh;
+        height: 89vh;
         /*margin:auto;
         border-color: #c7c5c5;*/
         border-width: 3px;
@@ -272,7 +273,7 @@ object{
     
     div#map{
         width:100%;
-        height: 83vh;
+        height: 89vh;
         /*margin:auto;*/
         /*border-color: #c7c5c5;*/
         border-width: 3px;
@@ -412,7 +413,12 @@ object{
     .info_container p{
         font-size: 0.8em;
     }
- }   
+ }
+@media screen and (min-width:508px) and (max-width:640px ){
+    .leaflet-control {
+        margin-bottom: 2px !important;
+    }
+}   
 @media screen and (min-width:481px) and (max-width:640px ){
     
     div#map{
@@ -549,7 +555,6 @@ object{
     }
  }   
 @media screen and (min-width:641px) and (max-width:1280px ){
-    
     div#map{
         width:100%;
         height: 83vh;
