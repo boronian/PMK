@@ -284,7 +284,7 @@ rGesLegend.onAdd = function (map) {
 			'<i style="background:' + getrGesColor(grades[i] + 1) + '"></i> ' +
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
-	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
+	div.innerHTML += '</p>Fälle pro 100&nbsp;000 Einwohner'
 	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	document.getElementById('Chart1').innerHTML = '<a href="image/wahlges.svg"><img src="image/wahlges.svg" width="100%" type="image/svg+xml"></img></a>';
 	return div;
@@ -334,7 +334,7 @@ rReLegend.onAdd = function(map) {
 			'<i style="background:' + getrReColor(grades[i] + 1) + '"></i> ' +
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
-	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
+	div.innerHTML += '</p>Fälle pro 100&nbsp;000 Einwohner'
 	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
@@ -384,7 +384,7 @@ rLiLegend.onAdd = function(map) {
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 		div.innerHTML += listring
 	}
-	div.innerHTML += '</p>Fälle pro 100 000 Einwohner'
+	div.innerHTML += '</p>Fälle pro 100&nbsp;000 Einwohner'
 	document.getElementById('chart').innerHTML ='<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
@@ -433,7 +433,7 @@ AusraLegend.onAdd = function(map) {
 			'<i style="background:' + getAusraColor(grades[i] + 1) + '"></i> ' +
 			grades[i] + (grades[i + 1] ? '\n&ndash;\n' + grades[i + 1] + '<br>' : '+');
 	}
-	div.innerHTML += '</p>Fälle pro 100 000 ausl. Einwohner'
+	div.innerHTML += '</p>Fälle pro 100&nbsp;000 ausl. Einwohner'
 	document.getElementById('chart').innerHTML = '<a href="image/Ges.svg"><img src="image/Ges.svg" width="100%" type="image/svg+xml"></img></a>'
 	return div;
 };
