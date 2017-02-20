@@ -108,7 +108,7 @@ object{
 
 .sidebar{
     border-radius: 5px !important;
-    z-index:1200 !important;
+    z-index:1040 !important;
 }
 .info_container ol{
     padding-left:3px;
