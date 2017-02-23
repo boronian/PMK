@@ -90,6 +90,7 @@ header h1#Kartentitel{
 a {
     text-decoration:none;
     color:darkslategray;
+    outline-style: 0 !important;
 }
 a:hover{
     color: salmon;
@@ -312,6 +313,7 @@ footer a:hover{
        padding-bottom: 0px;
        text-decoration: underline;
        text-decoration-style: dotted;
+       -webkit-text-decoration-style: dotted;
    }
 }
 
@@ -378,6 +380,7 @@ footer a:hover{
        padding-bottom: 0px;
        text-decoration: underline;
        text-decoration-style: dotted;
+       -webkit-text-decoration-style: dotted;
    }   
 }
 @media screen and (min-width:481px) and (max-width:767px ){
@@ -443,6 +446,7 @@ footer a:hover{
        padding-bottom: 0px;
        text-decoration: underline;
        text-decoration-style: dotted;
+       -webkit-text-decoration-style: dotted;
    }
 }
 @media screen and (min-width:768px) and (max-width:1024px ){
